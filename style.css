@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1e1e2f;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body.light {
+  background-color: cyan;
+  color: #1e1e2f;
+}
+
+.toggle-theme {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  z-index: 10;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-half, .right-half {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.left-half {
+  text-align: left;
+  padding: 2rem;
+}
+
+.left-half h1 span {
+  color: #ffffff;
+}
+
+.quiz-btn {
+  background-color: white;
+  color: #2f2f47;
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 200px;
+  transition: 0.3s;
+}
+
+.quiz-btn:hover {
+  background-color: #4f46e5;
+}
+
+#quizSection {
+  padding: 2rem;
+  text-align: center;
+}
+
+.option {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: white;
+  color: #2f2f47;
+}
+
+.option.correct {
+  background-color: green;
+}
+
+.option.incorrect {
+  background-color: red;
+}
+
+.navigation {
+  margin-top: 20px;
+}
+
+.navigation button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

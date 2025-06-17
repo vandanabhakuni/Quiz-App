@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="toggle-theme">
+    <label class="switch">
+      <input type="checkbox" id="themeToggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="container" id="selectionPage">
+    <div class="left-half">
+      <div class="welcome-text">
+        <h1>Welcome to the Frontend Quiz!</h1>
+        <p>Pick a subject to get started.</p>
+      </div>
+    </div>
+    <div class="right-half">
+      <button class="quiz-btn" data-subject="html">HTML</button>
+      <button class="quiz-btn" data-subject="css">CSS</button>
+      <button class="quiz-btn" data-subject="js">JavaScript</button>
+      <button class="quiz-btn" data-subject="accessibility">Accessibility</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script> 
+</body>
+</html>
